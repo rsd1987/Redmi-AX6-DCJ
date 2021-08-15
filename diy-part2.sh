@@ -36,21 +36,12 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-a
 # 添加核心温度的显示
 #sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
-
-
 #添加额外非必须软件包
-#adguardhome广告拦截很强大
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-
-#bypass科学学习
-#git clone https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
-
-#OpenClash小猫咪
 git clone https://github.com/vernesong/OpenClash.git package/OpenClash
-
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+git clone https://github.com/zzsj0928/luci-app-pushbot.git package/luci-app-pushbot
 #添加smartdns
 git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
 
-#添加chinadns-ng防污染分配合ssp还行
-#git clone -b luci https://github.com/pexcn/openwrt-chinadns-ng.git package/luci-app-chinadns-ng
